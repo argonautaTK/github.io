@@ -104,7 +104,7 @@ body::before {
 
 @keyframes fadeBg {
   to {
-    opacity: 0.25;
+    opacity: 0.15;
   }
 }
 
@@ -236,6 +236,16 @@ p.short {
   max-width: 10%;
 }
 
+/* .principal {
+  position: center;  
+  gap: 1.5rem;
+} */
+
+.principal img {
+  border-radius: 1rem;
+  position: center;  
+  gap: 1.5rem;
+}
 /* ===============================
    Galería
 ================================ */
