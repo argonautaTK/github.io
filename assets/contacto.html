@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Mi Sitio Estático</title>
+
+  <!-- javascript -->
+  <script src="main.js" defer></script>
+  <!-- PicoCSS CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Fondo con textura */
+/*  body {
+      background-image: 
+        url('https://www.transparenttextures.com/patterns/cream-paper.png'),
+        linear-gradient(to bottom, #f3f4f6, #e5e7eb);
+      background-attachment: fixed;
+      background-size: auto, cover;
+      color: #111;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-image: 
+        url('https://www.transparenttextures.com/patterns/dark-mosaic.png'),
+        linear-gradient(to bottom, #111827, #1f2937);
+      color: #f3f4f6;
+    }  */
+
+    /* Navegación fija */
+/*    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255,255,255,0.9);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    body.dark nav {
+      background-color: rgba(17,24,39,0.9);
+      border-color: rgba(255,255,255,0.1);
+    }
+    nav a { margin-left: 1rem; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    nav a.active { color: #2563eb; font-weight: 600; }
+    body.dark nav a.active { color: #60a5fa; }
+    nav a:hover { color: #2563eb; }
+    body.dark nav a:hover { color: #60a5fa; } */
+
+    /* Animación fade-in */
+/*    @keyframes fadeIn { 0% { opacity:0; transform: translateY(10px); } 100% { opacity:1; transform:translateY(0); } }
+    .animate-fade { animation: fadeIn 1.2s ease-out forwards; }  /*
+
+    /* Header */
+/*    header h1 { font-size:3rem; font-weight:800; margin-bottom:0.5rem; text-align:center; }
+    header p { font-size:1.25rem; color:#4b5563; text-align:center; }
+    body.dark header p { color:#d1d5db; } --> */
+
+    /* Formulario */
+/*    .form-container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      max-width: 40rem;
+      margin: 2rem auto;
+      transition: background-color 0.3s;
+    }
+    body.dark .form-container { background-color: #1f2937; }
+    input, textarea {
+      width: 100%; padding: 0.75rem 1rem; margin-top: 0.25rem; border-radius: 0.75rem;
+      border: 1px solid #d1d5db; background-color: #fff; outline:none;
+      transition: border 0.3s, box-shadow 0.3s, background-color 0.3s;
+    }
+    body.dark input, body.dark textarea { border-color:#4b5563; background-color:#374151; color:#f3f4f6; }
+    input:focus, textarea:focus { border-color:#2563eb; box-shadow:0 0 0 2px rgba(37,99,235,0.3); }
+    */
+    /* Botón enviar */
+/*    .btn-gradient {
+      width: 100%; padding:0.75rem; border-radius:0.75rem; font-weight:600;
+      color:#fff; background: linear-gradient(to right,#3b82f6,#6366f1);
+      border:none; box-shadow:0 6px 15px rgba(0,0,0,0.2); cursor:pointer; transition: all 0.3s;
+    }
+    .btn-gradient:hover {
+      background: linear-gradient(to right,#2563eb,#4f46e5); transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    } */
+
+    /* Botón flotante con menú desplegable */
+/*    .floating-menu { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 40; display: flex; flex-direction: column; align-items: flex-end; }
+    .floating-menu button {
+      width: 3.5rem; height: 3.5rem; border-radius: 50%; background: linear-gradient(to right,#3b82f6,#6366f1);
+      color: white; font-size:1.75rem; border:none; display:flex; justify-content:center; align-items:center;
+      cursor:pointer; box-shadow:0 8px 20px rgba(0,0,0,0.25); transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .floating-menu button:hover { transform: scale(1.1); box-shadow:0 10px 25px rgba(0,0,0,0.35); }
+
+    .floating-menu .menu-items {
+      display: none;
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+    }
+    .floating-menu .menu-items a {
+      background-color: #fff; color:#111; padding:0.5rem 1rem; border-radius:0.75rem;
+      margin-bottom:0.5rem; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.15);
+      transition: background-color 0.3s;
+    }
+    body.dark .floating-menu .menu-items a { background-color:#374151; color:#f3f4f6; }
+    .floating-menu .menu-items a:hover { background-color:#f3f4f6; }
+    body.dark .floating-menu .menu-items a:hover { background-color:#4b5563; }
+    .floating-menu.show .menu-items { display:flex; } */
+
+    /* Footer */
+    footer {
+      backdrop-filter: blur(6px); background-color: rgba(255,255,255,0.8);
+      border-top: 1px solid rgba(0,0,0,0.1); text-align:center; padding:2rem 0; margin-top:3rem;
+      transition: background-color 0.3s;
+    }
+    body.dark footer { background-color: rgba(17,24,39,0.8); border-color: rgba(255,255,255,0.1); }
+</style> 
+</head>
+
+<body>
+  <!-- Navegación -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <strong>Mi Sitio</strong>
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="galeria.html">Galería</a>
+        <a href="videos/videos.html">Videos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <button id="themeToggle" class="contrast" aria-label="Cambiar tema">'🌗'</button>
+    </div>
+  </nav>
+
+  <div style="height:4rem;"></div>
+
+  <!-- Header -->
+  <header class="hero animate-fade">
+    <h1>Contáctame</h1>
+    <p id=short>¿Tienes una pregunta, sugerencia o quieres colaborar? ¡Escríbenos!</p>
+  </header>
+
+  <!-- Formulario -->
+  <main>
+    <div class="form-container animate-fade">
+      <form action="#" method="POST" novalidate>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="100" placeholder="Tu nombre">
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="6" required minlength="10" placeholder="Escribe aquí tu mensaje..."></textarea>
+
+        <button type="submit" class="btn-gradient">Enviar mensaje</button>
+
+        <p style="text-align:center; font-size:0.875rem; margin-top:1rem; color:#6b7280;">
+          Este formulario es de demostración (sin backend). En producción puedes conectarlo a Formspree, Netlify Forms, Getform, etc.
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <!-- Botón flotante -->
+  <button id="btn-top" class="floatButton" aria-label="Volver arriba">⬆</button>
+
+  <!-- Botón flotante con menú -->
+<!--  <div class="floating-menu" id="floatingMenu">
+    <div class="menu-items">
+      <a href="../index.html">🏠 Inicio</a>
+      <a href="galeria.html">🖼 Galería</a>
+      <a href="videos/videos.html">🎥 Videos</a>
+    </div>
+    <button id="menuToggle">↑</button>
+</div> -->
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2026 · Creado con PicoCSS ·
+  </footer>
+
+</body>
+</html>

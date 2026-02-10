@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos - Mi Sitio Estático</title>
+
+  <!-- javascript -->
+  <script src="../main.js" defer></script>
+  <!-- PicoCSS CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="../styles.css" />
+
+</head>
+
+<body>
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <strong>Mi Sitio</strong>
+      <div class="nav-links">
+        <a href="../../index.html">Inicio</a>
+        <a href="../galeria.html">Galería</a>
+        <a href="videos.html">Videos</a>
+        <a href="../contacto.html">Contacto</a>
+      </div>
+      <button id="themeToggle" class="contrast" aria-label="Cambiar tema">'🌗'</button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero animate-fade">
+    <h1>Videos Destacados</h1>
+    <p>Una selección de videos interesantes y momentos memorables.</p>
+  </header>
+
+  <!-- Grid de videos -->
+  <main>
+    <div class="video-grid">
+
+      <div class="video-card animate-fade animate-float">
+        <div class="aspect-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Ejemplo de video musical" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="card-content">
+          <h3>Título del Video 1</h3>
+          <p>Descripción breve: un clásico que nunca pasa de moda. Duración aprox. 3:30 min.</p>
+        </div>
+      </div>
+
+      <div class="video-card animate-fade animate-float">
+        <div class="aspect-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_AQUI" title="Tutorial o documental" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="card-content">
+          <h3>Cómo hacer algo increíble</h3>
+          <p>Paso a paso en menos de 10 minutos. Ideal para principiantes.</p>
+        </div>
+      </div>
+
+      <div class="video-card animate-fade animate-float">
+        <div class="aspect-video">
+          <iframe src="https://player.vimeo.com/video/76979871?h=tu-hash-aqui" title="Ejemplo Vimeo" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="card-content">
+          <h3>Naturaleza en 4K</h3>
+          <p>Impresionantes tomas aéreas y submarinas. Relajante y visualmente espectacular.</p>
+        </div>
+      </div>
+
+      <div class="video-card animate-fade animate-float">
+        <div class="aspect-video">
+          <video controls>
+            <source src="assets/mi-video-local.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+        <div class="card-content">
+          <h3>Mi video personal</h3>
+          <p>Grabado con móvil – un recuerdo especial. (Reemplaza con tu archivo real)</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Botón flotante -->
+  <button id="btn-top" class="floatButton" aria-label="Volver arriba">⬆</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2026 · Creado con PicoCSS ·
+  </footer>
+
+  <!-- Scripts -->
+<!--  <script>
+    // Dark mode
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    function setTheme(isDark) {
+      body.classList.toggle('dark', isDark);
+      toggle.textContent = isDark ? '☀️' : "🌗";
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    toggle.addEventListener('click', () => setTheme(!body.classList.contains('dark')));
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme) setTheme(savedTheme === 'dark');
+    else if(window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme(true);
+
+    // Menú flotante
+    const menu = document.getElementById('floatingMenu');
+    const menuBtn = document.getElementById('menuToggle');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('show'));
+</script> -->
+
+</body>
+</html>

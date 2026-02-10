@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Sitio Estático - Inicio</title>
+
+  <script>
+    (function () {
+      const theme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+
+  <!-- javascript -->
+  <script src="assets/main.js" defer></script>
+  <!-- PicoCSS CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <strong>Mi Sitio</strong>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="assets/galeria.html">Galería</a>
+        <a href="assets/videos/videos.html">Videos</a>
+        <a href="assets/contacto.html">Contacto</a>
+      </div>
+      <button id="themeToggle" class="contrast" aria-label="Cambiar tema">🌗</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero animate-fade">
+    <h1>Bienvenido!!</h1>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- GALERÍA -->
+
+<div class="tabulado">   Duis dolore deserunt et est, deserunt sint cillum ut veniam excepteur. Ipsum laboris exercitation eu dolore sit esse non aliquip dolore minim, ea aliquip sint dolore culpa labore ad consequat ipsum dolore non. Consectetur officia est minim non aliqua laborum consectetur adipiscing aliquip qui incididunt ut culpa fugiat cupidatat cillum eiusmod enim cillum aliquip sit ipsum amet. Nisi ut deserunt ullamco nostrud cupidatat proident dolore anim ad aliquip consequat anim occaecat do laborum nisi consequat pariatur anim magna excepteur dolor amet. Sed sed do sit cillum sed mollit id excepteur ut cupidatat officia velit laborum elit dolor. Voluptate, culpa ipsum exercitation, duis ex sunt exercitation do ullamco in. Adipiscing cillum commodo do sed anim minim non excepteur cupidatat ex ut veniam cillum culpa; voluptate ad labore elit non incididunt incididunt ipsum do anim. Dolor ullamco in labore voluptate cillum, excepteur nisi ea esse cupidatat, irure. Laboris eu lorem deserunt sunt magna veniam, nisi dolore voluptate consequat cillum. Cupidatat sunt lorem dolor in cillum non, dolor laborum non minim ad nostrud exercitation veniam elit proident ea eiusmod excepteur amet consectetur ut amet est. Anim nostrud veniam consequat consectetur sint non excepteur fugiat ea dolore aliqua dolor incididunt tempor ex. Aute proident; laborum lorem aute eiusmod voluptate cillum, voluptate nulla irure incididunt; ex reprehenderit magna consectetur. Qui dolore enim sed sit sed laboris dolor dolore nulla incididunt ullamco fugiat ad est elit reprehenderit non ut ipsum labore amet. Pariatur esse dolor excepteur incididunt incididunt sint ea elit aute consectetur. Id ullamco ad exercitation esse voluptate magna sit aliquip tempor irure est mollit amet incididunt esse reprehenderit dolor. Occaecat mollit in consectetur culpa sit cupidatat lorem, lorem anim. Id et aliquip, eiusmod consequat proident aliqua nisi exercitation ea deserunt ut qui aliquip veniam fugiat id ex incididunt aliqua nisi pariatur. Occaecat duis amet consequat aliquip veniam deserunt cillum nulla excepteur excepteur lorem. Fugiat nulla ex ullamco, dolore in est sed incididunt ex excepteur elit culpa quis reprehenderit. Deserunt quis minim magna sint non dolor cillum reprehenderit ex sint sit et laborum nisi cillum, tempor est lorem sit officia ea minim sed. Fugiat lorem lorem cupidatat exercitation minim eu in consectetur occaecat esse laboris aliqua consequat sit cupidatat non sunt labore qui laborum.</div><br><div class="tabulado">   Do exercitation consectetur amet proident dolor ullamco duis cillum, velit, enim qui nisi et dolor occaecat minim officia. Quis enim id, mollit do commodo ea labore aliqua; enim officia et veniam in adipiscing non consectetur nostrud dolor commodo in exercitation excepteur. Est labore sint magna dolor minim et exercitation nisi exercitation do anim voluptate ipsum ut dolor elit ea amet, mollit sed consequat; excepteur et aliquip. Sint aute aliqua anim nisi reprehenderit et reprehenderit incididunt elit sint ex nisi reprehenderit excepteur cillum id magna deserunt voluptate lorem consequat nostrud. Labore incididunt aliqua pariatur commodo duis esse aute in in dolor enim labore nisi duis aliqua laborum fugiat dolore. Incididunt velit dolor veniam cillum ex reprehenderit enim ex dolore et officia amet incididunt tempor voluptate tempor nulla eu consequat nulla. Commodo reprehenderit occaecat excepteur cupidatat cupidatat aliquip pariatur, adipiscing laboris consectetur commodo eiusmod sit labore in dolore proident ut, nostrud. Labore consequat adipiscing fugiat duis do, minim aliqua do laboris adipiscing minim anim qui ea tempor deserunt laboris est ex et ut exercitation. In et in, tempor duis aliqua tempor tempor qui non ipsum, deserunt consectetur. Ut deserunt incididunt incididunt proident sit adipiscing pariatur mollit proident irure, deserunt laborum magna occaecat sunt nostrud consectetur eu, dolore. Ea sunt minim laborum laboris laboris tempor dolore fugiat nulla voluptate deserunt laborum; pariatur dolor adipiscing sint. Esse sed cillum ullamco officia est pariatur lorem mollit consequat eiusmod sint ipsum anim eiusmod dolore est nostrud nulla do. Sint est nostrud duis exercitation laboris voluptate minim eiusmod irure exercitation. In dolor anim dolore ea nostrud laboris anim fugiat nostrud, adipiscing culpa est nostrud eiusmod. Et irure lorem aliqua aliqua nisi elit consectetur fugiat ut; aliquip velit do culpa reprehenderit in lorem; ad velit pariatur. Fugiat irure irure commodo, fugiat et dolor et voluptate aute reprehenderit, tempor; et voluptate aute. Eu adipiscing sunt ad anim quis lorem ut; id minim.</div>
+    <section class="animate-fade">
+      <h2>Galería reciente</h2>
+
+      <div class="gallery">
+        <img src="assets/pets5.webp" alt="Mascota 1" loading="lazy" />
+        <img src="assets/pets8.webp" alt="Mascota 2" loading="lazy" />
+        <img src="assets/pets9.webp" alt="Mascota 3" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section class="animate-fade">
+      <h2>Videos destacados</h2>
+
+      <h3>Video local</h3>
+      <div class="video-box">
+        <video controls>
+          <source src="assets/videos/video.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <h3>Video de YouTube</h3>
+      <div class="aspect-video video-box">
+        <iframe
+          src=""
+          title="Video embebido"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+  <!-- </div>  -->
+
+  <!-- Botón flotante -->
+  <button id="btn-top" class="floatButton" aria-label="Volver arriba">⬆</button>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    © 2026 · Creado con PicoCSS ·
+  </footer>
+
+</body>
+</html>
+

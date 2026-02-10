@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería - Mi Sitio Estático</title>
+
+  <!-- javascript -->
+  <script src="main.js" defer></script>
+  <!-- PicoCSS CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <strong>Mi Sitio</strong>
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="galeria.html">Galería</a>
+        <a href="videos/videos.html">Videos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <button id="themeToggle" class="contrast" aria-label="Cambiar tema">'🌗'</button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero animate-fade">
+    <h1>Galería de Imágenes</h1>
+    <p>Haz clic en cualquier foto para verla en grande.</p>
+  </header>
+
+  <!-- Galería -->
+  <main class="container">
+    <div class="gallery-grid">
+      <div class="gallery-card" data-src="pets1.webp" data-alt="Mascota jugando en el parque">
+        <img src="pets1.webp" alt="Mascota jugando en el parque" loading="lazy">
+        <div class="gallery-overlay"><span>Ver</span></div>
+      </div>
+      <div class="gallery-card" data-src="pets2.webp" data-alt="Mascota durmiendo plácidamente">
+        <img src="pets2.webp" alt="Mascota durmiendo plácidamente" loading="lazy">
+        <div class="gallery-overlay"><span>Ver</span></div>
+      </div>
+      <div class="gallery-card" data-src="pets3.webp" data-alt="Mascota explorando la naturaleza">
+        <img src="pets3.webp" alt="Mascota explorando la naturaleza" loading="lazy">
+        <div class="gallery-overlay"><span>Ver</span></div>
+      </div>
+      <div class="gallery-card" data-src="pets7.webp" data-alt="Mascota explorando la naturaleza">
+        <img src="pets7.webp" alt="Mascota explorando la naturaleza" loading="lazy">
+        <div class="gallery-overlay"><span>Ver</span></div>
+      </div>
+      <div class="gallery-card" data-src="pets9.webp" data-alt="Mascota explorando la naturaleza">
+        <img src="pets9.webp" alt="Mascota explorando la naturaleza" loading="lazy">
+        <div class="gallery-overlay"><span>Ver</span></div>
+      </div>
+      <div class="gallery-card" data-src="pets4.webp" data-alt="Retrato artístico">
+        <img src="pets4.webp" alt="Retrato artístico" loading="lazy">
+        <div class="gallery-overlay"><span>Ver</span></div>
+      </div>
+      <div class="gallery-card" data-src="pets5.webp" data-alt="Mascota explorando la naturaleza">
+        <img src="pets5.webp" alt="Mascota explorando la naturaleza" loading="lazy">
+        <div class="gallery-overlay"><span>Ver</span></div>
+      </div>
+      <div class="gallery-card" data-src="pets10.webp" data-alt="Retrato artístico">
+        <img src="pets10.webp" alt="Retrato artístico" loading="lazy">
+        <div class="gallery-overlay"><span>Ver</span></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <button id="closeBtn" aria-label="Cerrar">×</button>
+    <img id="lightboxImg" alt="Imagen ampliada">
+  </div>
+
+  <!-- Botón flotante -->
+  <button id="btn-top" class="floatButton" aria-label="Volver arriba">⬆</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2026 · Creado con PicoCSS ·
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,534 @@
+/* ===============================
+   Variables Pico extendidas
+================================ */
+
+:root {
+  --radius-xl: 1.25rem;
+  --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+  --transition-fast: 0.3s ease;
+  --video-bg: #f9fafb;
+}
+
+:root[data-theme="light"] {
+    --floatButton-bg: blue;
+    --floatButton-color: white;
+    --floatButton-hover-bg: green;
+    --floatButton-hover-color: orange
+  }
+
+:root[data-theme="dark"] {
+    --video-bg: #1f2937;
+    --floatButton-bg: white; 
+    --floatButton-color lightblue; 
+    --floatButton-hover-bg: green;
+    --floatButton-hover-color: orange
+  }
+/* ===============================
+   Fondo con textura (light / dark)
+================================ */
+/*
+header {
+}
+*/
+
+/* tema boton flotante */
+.floatButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease,
+              transform 0.3s ease;
+  transform: translateY(10px);
+  z-index: 1;
+}
+
+.floatButton:hover {
+  background: var(--floatButton-hover-bg);
+  color: var(--floatButton-hover-color);
+  transform: scale(1.5);
+}
+
+#btn-top.show {
+  opacity: 0.9;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+:root[data-theme="light"] .floatButton {
+  background-color: var(--floatButton-bg);
+  color: var(--floatButton-color);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+:root[data-theme="dark"] .floatButton {
+  background-color: lightblue;
+  color: #121212;
+  box-shadow: 0 6px 18px rgba(255,255,255,0.15);
+}
+
+body {
+/*  background-image:
+    url("desfilando1.png"),
+    min-height: 100vh;*/
+/*  background-attachment: fixed;*/
+/*  position: relative;*/
+  /*background-size: 20%; /*auto, cover;*/
+  /*background-color: black; /* color base mientras aparece */
+  /*overflow: hidden;*/
+}
+body::before {
+  content: "";
+  position: fixed;
+/*  background-attachment: fixed;*/
+  inset: 0;
+  background-image: url("desfilando1.webp");
+  background-size: cover;
+/*  background-position: center; */
+  opacity: 0;
+  animation: fadeBg 2.0s ease forwards;
+/*  z-index: -1;*/
+}
+
+@keyframes fadeBg {
+  to {
+    opacity: 0.25;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html[data-theme="dark"] body {
+  background-image:
+    url("https://www.transparenttextures.com/patterns/dark-mosaic.png"),
+    linear-gradient(
+      to bottom,
+      var(--pico-background-color),
+      var(--pico-muted-background-color)
+    );
+}
+
+.tabulado {
+    text-indent: 4em;
+}
+
+p.short {
+    text-align: center;
+}
+/* ===============================
+   Navbar
+================================ */
+
+.top-nav {
+  position: fixed;
+  inset: 0px 50px auto 0;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  background: color-mix(
+    in srgb,
+    var(--pico-background-color) 85%,
+    transparent
+  );
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
+.nav-inner {
+  margin-inline: auto;
+  width: 80%;
+  max-width: 100%;
+ /* padding: 0rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  /*color: var(--pico-color);*/
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--pico-primary);
+}
+
+.nav-spacer {
+  height: 40px;
+}
+
+.contrast{
+    width: 20%;
+    margin-left: 80px; 
+    background-color: transparent;
+    margin-inline: right;
+    border: 0;
+    color: DodgerBlue
+}
+/* ===============================
+   Animaciones
+================================ */
+
+.fade-in {
+  opacity: 0;
+  animation: aparecer 1s ease forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-fade {
+  position: relative;
+  top: 6vw;
+  animation: fadeIn 1.2s ease-out both;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ===============================
+   Hero
+================================ */
+
+.hero {
+  text-align: center;
+  padding: 0rem 1rem;
+}
+
+.hero-image {
+/*  margin-top: 2rem;*/
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  max-width: 10%;
+}
+
+/* ===============================
+   Galería
+================================ */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery img {
+  border-radius: 1rem;
+  box-shadow: var(--shadow-xl);
+  transition: transform var(--transition-fast);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   Videos
+================================ */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 1rem;
+}
+@media (min-width: 1024px) {
+    .video-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.video-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+body.dark .video-card {
+  background-color: #1f2937;
+}
+.video-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+.video-card {
+  background-color: var(--video-bg);
+/*  background-color: var(--pico-background-color);*/
+/*  border-radius: var(--border-radius);*/
+  padding: 0.75rem;
+}
+.card-content {
+  padding: 1rem;
+}
+.video-card h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.video-card p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+body.dark .video-card p { color: #d1d5db; }
+
+.aspect-video { position: relative; padding-top: 56.25%; }
+.aspect-video iframe,
+.aspect-video video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+}
+/*
+.video-box {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  background: black;
+} 
+
+.video-box video {
+  width: 100%;
+  display: block;
+ } 
+
+.aspect-video {
+  position: relative;
+  padding-bottom: 56.25%;
+} */
+
+.aspect-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+} 
+
+/* ===============================
+   Botón flotante
+================================ */
+/*#btn-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease,
+              transform 0.3s ease;
+  transform: translateY(10px);
+  z-index: 1;
+} */
+
+/* ===============================
+   Galería 
+=============================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.7s ease-out;
+}
+.gallery-card img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  transition: transform 0.7s ease-out;
+  display: block;
+}
+.gallery-card:hover img { transform: scale(1.1); }
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.gallery-card:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+  transition: all 0.5s;
+  z-index: 50;
+}
+#lightbox.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+#lightboxImg {
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transition: transform 0.5s;
+}
+#closeBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Footer */
+/*footer {
+  backdrop-filter: blur(6px);
+  background-color: rgba(255,255,255,0.8);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}*/
+body.dark footer {
+  background-color: rgba(17,24,39,0.8);
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* ===============================
+   Footer
+================================ */
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  backdrop-filter: blur(6px);
+  background: color-mix(
+    in srgb,
+    var(--pico-background-color) 80%,
+    transparent
+  );
+  border-top: 1px solid var(--pico-muted-border-color);
+}
+
+/* ===============================
+      Formulario
+================================ */
+
+.form-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  max-width: 40rem;
+  margin: 2rem auto;
+  transition: background-color 0.3s;
+}
+body.dark .form-container {
+  background-color: #1f2937;
+}
+input, textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  outline:none;
+  transition: border 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+body.dark input, body.dark textarea {
+  border-color:#4b5563;
+  background-color:#374151;
+  color:#f3f4f6;
+}
+input:focus, textarea:focus {
+  border-color:#2563eb;
+  box-shadow:0 0 0 2px rgba(37,99,235,0.3);
+}
+
+/* Botón enviar */
+.btn-gradient {
+  width: 100%;
+  padding:0.75rem;
+  border-radius:0.75rem;
+  font-weight:600;
+  color:#fff;
+  background: linear-gradient(to right,#3b82f6,#6366f1);
+  border:none;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+  cursor:pointer;
+  transition: all 0.3s;
+}
+.btn-gradient:hover {
+  background: linear-gradient(to right,#2563eb,#4f46e5);
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
