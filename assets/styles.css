@@ -148,8 +148,8 @@ p.short {
 
 .nav-inner {
   margin-inline: auto;
-  width: 80%;
-  max-width: 100%;
+  width: 100%;
+  max-width: 80%;
  /* padding: 0rem; */
   display: flex;
   align-items: center;
@@ -168,7 +168,7 @@ p.short {
 }
 
 .nav-spacer {
-  height: 40px;
+  height: 10px;
 }
 
 .contrast{
@@ -226,7 +226,8 @@ p.short {
 
 .hero {
   text-align: center;
-  padding: 0rem 1rem;
+  top: 8vw;
+  /*padding: 0rem 10vw;*/
 }
 
 .hero-image {
