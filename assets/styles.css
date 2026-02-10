@@ -134,7 +134,8 @@ p.short {
 ================================ */
 
 .top-nav {
-  position: fixed;
+  /*position: fixed;*/
+  width: 100%;
   inset: 0px 50px auto 0;
   z-index: 1;
   backdrop-filter: blur(10px);
@@ -148,19 +149,29 @@ p.short {
 
 .nav-inner {
   margin-inline: auto;
-  width: 100%;
-  max-width: 80%;
- /* padding: 0rem; */
+/*  width: 100%;*/
+/*  max-width: 80%; */
+  padding: 0rem; 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
-.nav-links a {
+.nav-links {
+  display: flex;
   margin-left: 1rem;
   text-decoration: none;
   /*color: var(--pico-color);*/
   transition: color var(--transition-fast);
+/*  flex-wrap: nowrap;  */      /* evita que bajen de línea */
+  gap: 12px;   
+/*  overflow-x: auto;   */     /* scroll horizontal en móvil */
+/*  white-space: nowrap; */     /* fuerza una sola línea */
+}
+
+.nav-links a {
+  flex-shrink: 0;   
 }
 
 .nav-links a:hover {
@@ -171,6 +182,14 @@ p.short {
   height: 10px;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
 .contrast{
     width: 20%;
     margin-left: 80px; 
