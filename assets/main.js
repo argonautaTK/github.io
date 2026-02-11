@@ -37,6 +37,33 @@ btnTop.addEventListener('click', () => {
   });
 });
 
+// ======================================
+// Gestión del menú
+// ======================================
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const overlay = document.getElementById("overlay");
+
+function closeMenu() {
+  menuToggle.classList.remove("active");
+  navLinks.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  navLinks.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", closeMenu);
+
+// Cerrar al pulsar un enlace
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
+
 // Fade-in tarjetas
 // ======================================
 const cards = document.querySelectorAll('.gallery-card');
