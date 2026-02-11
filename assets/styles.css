@@ -151,20 +151,20 @@ p.short {
   justify-content: space-between;
   z-index: 1;
 }
-/*
+
 .nav-links {
   display: flex;
   gap: 50px;
-} */
-/*
+} 
+
 .nav-links a {
   color: #DEFC85;
   font-weight: bold;
   text-decoration: none;
-} */
+} 
 
 /* Ocultar botón hamburguesa en escritorio */
-/*
+
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -180,12 +180,12 @@ p.short {
     background: #111;
     flex-direction: column;
     padding: 80px 20px;
-    gap: 25px;*/
+    gap: 25px;
 }
 
 /* ===== MODO MÓVIL ===== */
-/*
-@media (max-width: 768px) { */
+
+@media (max-width: 768px) {
   .menu-toggle {
     position: left;
     display: block;
@@ -213,20 +213,20 @@ p.short {
   .nav-links.active {
     right: 0%;
   }
-/*}
+}
 
 /* =============================== */
 
 .contrast{
    /* width: 10%;
     height: 10%; */
-/**    margin-left: 70%;
+    margin-left: 70%;
     padding: 0% 0%;
     background-color: transparent;
     margin-inline: right;
     border: 0;
     color: #DEFC85;
-    font-weight: bold; **/
+    font-weight: bold;
 } 
 /* ===============================
    Animaciones
