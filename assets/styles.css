@@ -164,7 +164,7 @@ p.short {
 }
 
 /* Ocultar botón hamburguesa en escritorio */
-
+/*
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -187,6 +187,7 @@ p.short {
 
 @media (max-width: 768px) {
   .menu-toggle {
+    position: left;
     display: block;
   }
 
@@ -215,13 +216,13 @@ p.short {
 .contrast{
    /* width: 10%;
     height: 10%; */
-    margin-left: 70%;
+/**    margin-left: 70%;
     padding: 0% 0%;
     background-color: transparent;
     margin-inline: right;
     border: 0;
     color: #DEFC85;
-    font-weight: bold;
+    font-weight: bold; **/
 } 
 /* ===============================
    Animaciones
