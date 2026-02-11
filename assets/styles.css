@@ -151,17 +151,17 @@ p.short {
   justify-content: space-between;
   z-index: 1;
 }
-
+/*
 .nav-links {
   display: flex;
   gap: 50px;
-} 
-
+} */
+/*
 .nav-links a {
   color: #DEFC85;
   font-weight: bold;
   text-decoration: none;
-}
+} */
 
 /* Ocultar botón hamburguesa en escritorio */
 /*
@@ -184,8 +184,8 @@ p.short {
 }
 
 /* ===== MODO MÓVIL ===== */
-
-@media (max-width: 768px) {
+/*
+@media (max-width: 768px) { */
   .menu-toggle {
     position: left;
     display: block;
@@ -206,10 +206,14 @@ p.short {
 
   }
 
+  .nav-links a {
+    color: #DEFC85;
+    text-decoration: none;
+  } 
   .nav-links.active {
     right: 0%;
   }
-}
+/*}
 
 /* =============================== */
 
