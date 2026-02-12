@@ -204,9 +204,9 @@ p.short {
     font-size: 20px;
     gap: 15px;
     margin-inline: right;
+    margin-right: 16vw;
   }
   .contrast {
-  /*  margin-left: 24vw;*/
   }
 
   .nav-links {
