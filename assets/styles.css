@@ -99,7 +99,7 @@ body::before {
 /*  background-position: center; */
   opacity: 0;
   animation: fadeBg 2.0s ease forwards;
-/*  z-index: -1;*/
+  z-index: -4;*/
 }
 
 @keyframes fadeBg {
@@ -134,100 +134,103 @@ p.short {
 ================================ */
 
 .top-nav {
-  width: 100%;
-  inset: 0px 50px auto 0;
-  z-index: 1;
   background: #111;
-  opacity: 0.8;
-  padding: 10px 20px;
-
+  padding: 0% 40%;
 }
 
 .nav-inner {
-  margin-inline: auto;
   display: flex;
-  padding: 0rem;
   align-items: center;
-  justify-content: space-between;
-  z-index: 1;
+  justify-content: space-between; /* separa centro y derecha */
+  position: relative;
 }
+
+/* ===== NAV-LINKS CENTRADO EN DESKTOP ===== */
 
 .nav-links {
   display: flex;
-  gap: 50px;
-} 
+  gap: 30px;
+  margin: 0 auto; /* lo centra */
+  margin-inline-end: 30%;
+}
 
 .nav-links a {
-  color: #DEFC85;
-  font-weight: bold;
+  color: white;
   text-decoration: none;
-} 
+  font-size: 20px;
+}
 
-/* Ocultar botón hamburguesa en escritorio */
+/* ===== BOTONES DERECHA ===== */
 
+/*.contrast{
+    padding: 0% 50%;
+    background-color: transparent;
+    margin-inline: right;
+    border: 0px;
+    color: #DEFC85;
+    font-weight: bold;
+}  */
+.contrast,
 .menu-toggle {
-  display: none;
-  font-size: 24px;
   background: none;
   border: none;
-  color: #DEFC85;
+  color: white;
+  font-size: 20px;
   cursor: pointer;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 250px;
-    background: #111;
-    flex-direction: column;
-    padding: 80px 20px;
-    gap: 25px;
+  margin-left: 15px;
 }
+
+/* Ocultar hamburguesa en desktop */
+.menu-toggle {
+  display: none;
+}
+
 
 /* ===== MODO MÓVIL ===== */
 
 @media (max-width: 768px) {
+
+  .top-nav {
+    background: #111;
+    padding: 0% 300px;
+  }
+  /* Ocultar menú por defecto */
+  .contrast {
+  }
   .menu-toggle {
-    position: left;
-    display: block;
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 40px;
+    font-size: 20px;
+    gap: 15px;
+    margin-inline: right;
   }
 
   .nav-links {
-    position: fixed;
-    top: 0;
-    right: 100%;
-    height: 40%;
-    width: 15%;
-    background: #111;
-    opacity: 0.9;
+    display: none;
+    top: 60px;
+    right: 10px;
     flex-direction: column;
-    padding: 10% 5%;
-    gap: 25px;
-    transition: right 0.3s ease;
-
+    background: #111;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 9999;
   }
 
-  .nav-links a {
-    color: #DEFC85;
-    text-decoration: none;
-  } 
   .nav-links.active {
-    right: 0%;
+    position: absolute;
+    display: grid;
+  }
+
+  /* Mostrar hamburguesa en móvil */
+  .menu-toggle {
+    display: inline-block;
   }
 }
-
 /* =============================== */
 
-.contrast{
-   /* width: 10%;
-    height: 10%; */
-    margin-left: 70%;
-    padding: 0% 0%;
-    background-color: transparent;
-    margin-inline: right;
-    border: 0;
-    color: #DEFC85;
-    font-weight: bold;
-} 
 /* ===============================
    Animaciones
 ================================ */
