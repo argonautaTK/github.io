@@ -192,7 +192,7 @@ p.short {
 
   .top-nav {
     background: #111;
-    padding: 0% 300px;
+    width: 100%;
   }
   /* Ocultar menú por defecto */
   .contrast {
