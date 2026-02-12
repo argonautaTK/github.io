@@ -206,7 +206,7 @@ p.short {
     margin-inline: right;
   }
   .contrast {
-    margin-left: 24vw;
+  /*  margin-left: 24vw;*/
   }
 
   .nav-links {
